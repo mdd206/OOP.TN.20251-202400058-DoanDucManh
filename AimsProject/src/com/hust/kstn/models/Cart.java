@@ -52,10 +52,10 @@ public class Cart {
 		}
 		if (pos == qtyOrdered) System.out.println("The disc does not exist");
 		else {
-			for (int i = pos; i < qtyOrdered; ++i) {
-				if (pos == qtyOrdered-1) itemsInCart[pos] = null;
-				itemsInCart[pos] = itemsInCart[pos+1];
+			for (int i = pos; i < qtyOrdered - 1; ++i) {
+				itemsInCart[i] = itemsInCart[i+1];
 			}
+			itemsInCart[qtyOrdered - 1] = null;
 			qtyOrdered --;
 			System.out.println("The disc has been removed successfully");
 		}
@@ -70,11 +70,16 @@ public class Cart {
 	}
 	
 	public void print() {
-		System.out.println("=== Total items in cart: " + qtyOrdered + " ===");
-		System.out.println("=== All items in cart ===");
-		for (int i = 0; i < qtyOrdered; ++i) {
-			System.out.println("[Title]: " + itemsInCart[i].getTitle() + ", " + "[Cost]: " + itemsInCart[i].getCost());
+		if (qtyOrdered == 0) {
+			System.out.println("The cart is empty");
+			return;
 		}
-		System.out.println("=== Total cost in cart: " + caculateTotalCost() + " ===");
-	}	
+		System.out.println("======================= THE CURRENT CART =======================");
+		System.out.println("Total items: " + qtyOrdered);
+		for (int i = 0; i < qtyOrdered; ++i) {
+			System.out.println(itemsInCart[i].toString());
+		}
+		System.out.println("Subtotal: " + caculateTotalCost() + "$");
+		System.out.println("================================================================");
+	}
 }
