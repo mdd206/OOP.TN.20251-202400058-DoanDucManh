@@ -1,0 +1,8 @@
+- Khi chạy phương thức swap(s1, s2) thì tên của 2 học sinh vẫn không thay đổi do java
+chỉ truyền vào phương thức 2 bản sao của s1, s2, ví dụ là x1, x2, tức x1 và s1 cùng 
+trỏ đến một đối tượng, tương tự với x2. Vậy nên khi thực hiện swap chỉ swap x1 và x2 chứ
+không swap s1 và s2. Vậy java là ngôn ngữ truyền tham trị.
+- Để phương thức swap hoạt động em sẽ thực hiện hoán đổi từng thuộc tính của đối tượng
+chứ không hoán đổi cả đối tượng.
+- Như trong hình minh họa sẽ hoán đổi x1.studentId với x2.studentID, x1.name với x2.name.
+Khi đó đối tượng Student mà s1 trỏ tới sẽ là Student(2,B) và s2 trỏ tới là Student(1,A).
