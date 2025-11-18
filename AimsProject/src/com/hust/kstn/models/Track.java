@@ -2,22 +2,22 @@ package com.hust.kstn.models;
 
 public class Track {
 	private String title;
-	private int lenght;	
+	private int length;	
 	
-	public Track(String title, int lenght) {
+	public Track(String title, int length) {
 		this.title = title;
-		this.lenght = lenght;
+		this.length = length;
 	}
 	
 	public String getTitle() {
 		return title;
 	}
-	public int getLenght() {
-		return lenght;
+	public int getLength() {
+		return length;
 	}
 
 	@Override
 	public String toString() {
-		return this.title + " (" + this.lenght + ")\n";
+		return this.title + " (" + this.length + ")\n";
 	}
 }

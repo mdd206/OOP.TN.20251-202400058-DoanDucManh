@@ -3,37 +3,16 @@ package com.hust.kstn.models;
 import java.util.List;
 import java.util.ArrayList;
 
-public class Book {
-	private int bookID;
-	private static int nbBooks = 0;
-	private String title;
-	private String category;
-	private double price;
+public class Book extends Media {
 	private List<BookAuthor> authors = new ArrayList<>();
 	private int pageCount;
 	
-	public Book(String title, String category, double price, List<BookAuthor> authors, int pageCount) {
-		nbBooks ++;
-		this.bookID = nbBooks;
-		this.title = title;
-		this.category = category;
-		this.price = price;
+	public Book(String title, String category, double cost, List<BookAuthor> authors, int pageCount) {
+		super(title, cost, category);
 		this.authors = authors;
 		this.pageCount = pageCount;
 	}
-	
-	public int getBookID() {
-		return bookID;
-	}
-	public String getTitle() {
-		return title;
-	}
-	public String getCategory() {
-		return category;
-	}
-	public double getPrice() {
-		return price;
-	}
+
 	public List<BookAuthor> getAuthors() {
 		return authors;
 	}
@@ -43,10 +22,7 @@ public class Book {
 	
 	@Override
 	public String toString() {
-	    return "Book[" + this.bookID + "]["
-	            + this.title + "]["
-	            + this.price + "]["
-	            + this.category + "]["
+	    return super.toString()
 	            + this.pageCount + "]"
 	            + "\nAuthors: " + this.authors;
 	}

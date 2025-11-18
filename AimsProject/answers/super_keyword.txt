@@ -1,0 +1,6 @@
+Trong mã nguồn của lớp Book:
+- super(title, cost, category) để gọi đến hàm khởi tạo của lớp cha.
+- super.toString() để gọi đến phương thức toString() của lớp cha.
+Vậy từ khóa super cho phép chúng ta truy cập đến các thành viên của 
+lớp cha từ lớp con và cũng có thể được sử dụng để gọi đến các hàm 
+khởi tạo và phương thức của lớp cha.

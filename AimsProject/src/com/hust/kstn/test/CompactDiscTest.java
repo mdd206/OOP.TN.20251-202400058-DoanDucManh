@@ -22,7 +22,7 @@ public class CompactDiscTest {
         
         System.out.println("=== CD Information ===");
         System.out.println(cd);
-        System.out.println("Total length: " + cd.totalLenght() + " seconds");
+        System.out.println("Total length: " + cd.totalLength() + " seconds");
         
         Track track3 = new Track("Track 3", 240);
         cd.addTrack(track3);
@@ -33,6 +33,6 @@ public class CompactDiscTest {
         cd.addTrack(track3);
         System.out.println("=== CD Information ===");
         System.out.println(cd);
-        System.out.println("Total length: " + cd.totalLenght() + " seconds");
+        System.out.println("Total length: " + cd.totalLength() + " seconds");
     }
 }

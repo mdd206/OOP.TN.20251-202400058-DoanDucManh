@@ -1,0 +1,10 @@
+Lý do java chỉ hỗ trợ đơn kế thừa là:
+- Vấn đề “kim cương” (diamond problem): Khi một lớp kế thừa từ hai lớp cha có cùng phương thức,
+việc chọn phương thức nào để dùng trở nên mơ hồ, gây lỗi khó đoán và khó bảo trì.
+- Ví dụ 2 lớp động vật trên cạn và động vật dưới nước cùng kế thừa lớp động vật, 
+và lớp động vật lưỡng cư kế thừa cả 2 lớp này, nhưng việc chọn cho nó sống trên cạn
+hay dưới nước khi lập trình sẽ mơ hồ, gây khó đoán.
+- Java loại bỏ đa kế thừa ở cấp lớp để tránh mơ hồ về phân giải phương thức và trạng thái thừa kế,
+giữ mô hình đơn giản, nhất quán.
+- C++ cho phép đa kế thừa đầy đủ: Điều này mạnh mẽ nhưng đi kèm độ phức tạp cao.
+- Java ưu tiên đơn giản và an toàn, ít rủi ro hơn.
