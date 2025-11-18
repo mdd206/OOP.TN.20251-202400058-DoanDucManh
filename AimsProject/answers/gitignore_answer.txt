@@ -1,1 +1,24 @@
-null
+1. Thêm các đường dẫn trên vào .gitignore vì:
+Các file/folder này được sinh ra tự động bởi Eclipse IDE, chúng là file cấu hình cá nhân của IDE (không liên quan đến source code), file build tạm thời (bin chứa .class).
+- Không cần thiết đẩy lên Git và có thể gây xung đột giữa nhiều người dùng IDE khác nhau
+- Làm repository nặng và chứa dữ liệu rác
+
+2. Nếu dùng IntelliJ IDEA thì thêm:
+.idea/
+*.iml
+out/
+Còn nếu dùng VSCode thì thêm:
+.vscode/
+
+3. Nếu đã lỡ commit các file rồi và muốn Git ngừng theo dõi mà không xóa khỏi máy, ta dùng lệnh:
+Bước 1: Thêm các file/folder đó vào .gitignore
+bin
+.classpath
+.project
+Bước 2: Buộc Git ngừng theo dõi các file đã commit
+git rm -r --cached bin 
+git rm -r --cached .classpath
+git rm -r --cached .project
+Bước 3: Commit lại để cập nhật repo
+git commit -m "Remove tracked files that are now in .gitignore"
+
