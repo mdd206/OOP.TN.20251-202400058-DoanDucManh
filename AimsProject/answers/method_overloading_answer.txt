@@ -1,0 +1,4 @@
+Khi thêm phương thức addDVD (DigitalVideoDisc ...discs) sẽ xảy ra lỗi do phương thức này
+có cùng chữ ký với phươnng thức addDVD (DigitalVideoDisc[] discs) đã tồn tại trong lớp. Do 
+đó để giải quyết vấn đề này, vì chúng có cùng chức năng là thêm một lúc nhiều DVD vào Cart 
+em sẽ chỉ sử dụng một trong hai phương thức trên.
